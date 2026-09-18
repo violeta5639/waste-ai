@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Waste AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>What tipe of material do you have scanner</h1>
+
+        <p>Take a photo and AI would tell which kind do you have</p>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <input
+                type="file"
+                name="imagen"
+                accept="image/*"
+                required
+            >
+
+            <button type="submit">
+                Analizar basura
+            </button>
+
+        </form>
+
+
+        {% if imagen %}
+
+            <div class="resultado">
+
+                <img src="{{ imagen }}" alt="Imagen subida">
+
+                <h2>Resultado</h2>
+
+                <div class="tipo">
+                    {{ resultado }}
+                </div>
+
+                <p>
+                    Confianza: {{ confianza }}%
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
