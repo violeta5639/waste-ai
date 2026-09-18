@@ -1,0 +1,6 @@
+﻿__pycache__/
+.venv/
+venv/
+static/uploads/
+modelo_basura.keras
+modelo_basura.h5
