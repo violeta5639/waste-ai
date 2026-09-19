@@ -29,7 +29,7 @@
             >
 
             <button type="submit">
-                Analizar basura
+                Analize trash
             </button>
 
         </form>
@@ -37,19 +37,16 @@
 
         {% if imagen %}
 
-            <div class="resultado">
+            <div class="Result">
 
-                <img src="{{ imagen }}" alt="Imagen subida">
+                <img src="{{ imagen }}" alt="Uploaded Image" class="imagen">
 
-                <h2>Resultado</h2>
+                <h2>Result</h2>
 
                 <div class="tipo">
                     {{ resultado }}
                 </div>
 
-                <p>
-                    Confianza: {{ confianza }}%
-                </p>
 
             </div>
 
